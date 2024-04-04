@@ -1,19 +1,18 @@
 {% extends "eduprod/layout.html" %}
 {% block body %}
+{% load static %}
 
-<div id="content" data-questions='{{ questions_json|safe }}'></div>
-<button id="revealBtn">Reveal Answer</button>
 <form action="{% url 'eduprod:index' %}" method="post" style="margin: 0; margin-left: 20px;">
-    {% csrf_token %}
-    <button type="submit">Reset Quiz</button>
-</form>
-<!-- Add Question Link -->
-<div style="margin-top: 20px;">
-    <a href="{% url 'eduprod:question_add' %}">Add a new question</a>
+
+<div class="landing">
+    <div class="banner">
+    </div>
+    <div class="buttons-container">
+        <button class="student-btn" onclick="window.location.href='/quiz'">I'm a student</button>
+        <button class="teacher-btn" onclick="window.location.href='/authentication'">I'm a teacher</button>
+    </div>
 </div>
-<!-- Link to Question List for Editing or Deleting Questions -->
-<div style="margin-top: 10px;">
-    <a href="{% url 'eduprod:question_list' %}">Manage questions</a>
-</div>
+
 
 {% endblock %}
+
