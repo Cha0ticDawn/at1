@@ -41,15 +41,10 @@ p {
 .logo img {
     height: auto; /* Keep image aspect ratio */
     width: auto; /* You can set a max-width here if needed */
+
 }
 .user-info {
     display: flex;
     align-items: center;
 }
 
-/* Changing the size and position of the image*/
-.side-logo img {
-    height: 100px;
-    width: 100px; 
-    margin-top: 1000px;
- }

@@ -38,3 +38,4 @@ class QuestionList(LoginRequiredMixin, ListView):
     model = Question
     context_object_name = 'questions'
     template_name = 'eduprod/question_list.html'
+    
