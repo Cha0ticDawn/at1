@@ -7,13 +7,5 @@
     {% csrf_token %}
     <button type="submit">Reset Quiz</button>
 </form>
-<!-- Add Question Link -->
-<div style="margin-top: 20px;">
-    <a href="{% url 'eduprod:question_add' %}">Add a new question</a>
-</div>
-<!-- Link to Question List for Editing or Deleting Questions -->
-<div style="margin-top: 10px;">
-    <a href="{% url 'eduprod:question_list' %}">Manage questions</a>
-</div>
 
 {% endblock %}

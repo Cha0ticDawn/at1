@@ -1,0 +1,19 @@
+{% extends "users/layout.html" %}
+{% block body %}
+    <h1>Welcome, {{ request.user.first_name }}</h1>
+    <p>Username: {{ request.user.username }}</p>
+    <p>
+        <h2>Teacher!</h2>
+    </p>
+    <a href="{% url 'eduprod:index' %}">Take the Quiz</a>
+
+    <!-- Add Question Link -->
+    <div style="margin-top: 20px;">
+        <a href="{% url 'eduprod:question_add' %}">Add a new question</a>
+    </div>
+    <!-- Link to Question List for Editing or Deleting Questions -->
+    <div style="margin-top: 10px;">
+        <a href="{% url 'eduprod:question_list' %}">Manage questions</a>
+    </div>
+
+{% endblock %}

@@ -2,5 +2,16 @@
 {% block body %}
     <h1>Welcome, {{ request.user.first_name }}</h1>
     <p>Username: {{ request.user.username }}</p>
+    <p>
+        <form action="{% url 'eduprod:index' %}" method="get" style="margin: 0; margin-left: 20px;">
+            {% csrf_token %}
+            <button type="submit">I'm a student</button>
+        </form>
+        <br/>
+        <form action="{% url 'users:teacher' %}" method="get" style="margin: 0; margin-left: 20px;">
+            {% csrf_token %}
+            <button type="submit">I'm a teacher</button>
+        </form>
+    </p>
     <a href="{% url 'eduprod:index' %}">Take the Quiz</a>
 {% endblock %}

@@ -46,3 +46,7 @@ p {
     display: flex;
     align-items: center;
 }
+.side-logo img {
+    height: 100px;
+    width: 100px; 
+ }
