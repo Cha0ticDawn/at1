@@ -46,7 +46,10 @@ p {
     display: flex;
     align-items: center;
 }
+
+/* Changing the size and position of the image*/
 .side-logo img {
     height: 100px;
     width: 100px; 
+    margin-top: 1000px;
  }

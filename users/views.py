@@ -28,5 +28,6 @@ def logout_view(request):
     messages.success(request, "Successfully logged out.")
     return redirect(reverse('users:login'))
 
+# Allowing the user to view the teacher page #
 def teacher_view(request):
     return render(request, "users/teacher.html")
