@@ -1,7 +1,6 @@
-{% extends "eduprod/layout.html" %}
-{% block body %}
-{% load static %}
-
+<div class="quiz"></div>
+<div id="content" data-questions='{{ questions_json|safe }}'></div>
+<button id="revealBtn">Reveal Answer</button>
 <form action="{% url 'eduprod:index' %}" method="post" style="margin: 0; margin-left: 20px;">
     {% csrf_token %}
     <button type="submit">Reset Quiz</button>
@@ -14,6 +13,3 @@
 <div style="margin-top: 10px;">
     <a href="{% url 'eduprod:question_list' %}">Manage questions</a>
 </div>
-
-{% endblock %}
-

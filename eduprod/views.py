@@ -14,6 +14,9 @@ def index(request):
     questions_json = serializers.serialize('json', questions)
     return render(request, 'eduprod/index.html', {'questions_json': questions_json})
 
+def landing_page(request):
+    return render(request, 'eduprod/index.html')
+
 class QuestionCreate(LoginRequiredMixin, CreateView):
     model = Question
     form_class = QuestionForm
